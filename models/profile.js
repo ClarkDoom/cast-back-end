@@ -8,7 +8,7 @@ const profileSchema = new Schema({
   photo: String,
   pronouns: {
     type: String,
-    enum: ['He/Him/His', 'She/Her/Hers', 'They/Them/Theirs']
+    // enum: ['He/Him/His', 'She/Her/Hers', 'They/Them/Theirs']
   },
   isCd: Boolean,//true = cd, false = talent
   location: String,//where the user is based

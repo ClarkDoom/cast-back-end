@@ -13,6 +13,7 @@ const index = async (req, res) => {
 
 const update = async (req, res) => {
   try {
+      console.log(req.body)
       const talentAccount = await TalentAccount.findByIdAndUpdate(
         req.params.id,
         req.body,
@@ -46,6 +47,7 @@ const createExperience = async (req, res) => {
 }
 
 const createEducation = async (req, res) => {
+  console.log(req.body)
   try {
     const talentAccount = await TalentAccount.findById(req.params.id)
     talentAccount.education.push(req.body)
@@ -57,6 +59,7 @@ const createEducation = async (req, res) => {
 }
 
 const createTraining = async (req, res) => {
+  console.log(req.body)
   try {
     const talentAccount = await TalentAccount.findById(req.params.id)
     talentAccount.training.push(req.body)

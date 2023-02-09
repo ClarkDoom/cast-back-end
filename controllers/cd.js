@@ -3,6 +3,7 @@ import { TalentAccount } from '../models/talentAccount.js'
 
 const update = async (req, res) => {
   try {
+    console.log("ATTENTION", req.body)
     const cdAccount = await CDAccount.findByIdAndUpdate(
       req.params.id,
       req.body,
@@ -10,7 +11,8 @@ const update = async (req, res) => {
       )
     res.status(200).json(cdAccount)
   } catch (error) {
-      res.status(500).json(error)
+    console.log(error)
+    res.status(500).json(error)
   }
 }
 

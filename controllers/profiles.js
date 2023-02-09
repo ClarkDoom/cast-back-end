@@ -70,6 +70,7 @@ const update = async (req, res) => {
 const createTalentAccount = async (req, res) => {
   try {
     const profile = await Profile.findById(req.params.id)
+    console.log("createTalentAccount ", req.body)
     const talentAccount = await TalentAccount.create(req.body)
     talentAccount.name = profile.name
     profile.talentAccount = talentAccount._id
